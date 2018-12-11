@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Creates symbolic links for dotfiles, deletes existing configs
+
+# home 
+rm ~/.xinitrc 	; ln -sv .xinitrc ~
+rm ~/.bashrc 	; ln -sv .bashrc ~
+rm ~/.vimrc 	; ln -sv .vimrc ~
+
+# .config 
+mkdir ~/.config
+mkdir ~/.config/i3/ 	  ; rm ~/.config/i3/config 	 ; ln -sv .i3 ~/.config/i3/config
+mkdir ~/.config/i3status/ ; rm ~/.config/i3stauts/config ; ln -sv .i3status ~/.config/i3status/config
+mkdir ~/.config/termite/  ; rm ~/.config/termite/config  ; ln -sv .termite ~/.config/termite/config
+
