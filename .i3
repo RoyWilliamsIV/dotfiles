@@ -227,11 +227,11 @@ bar {
 	
 	strip_workspace_numbers yes
 	
-	mode hide 
-	hidden_state hide
-	modifier Mod1	
+	# mode hide 
+	# hidden_state hide
+	# modifier Mod1	
 	colors {
-	background #000000
+	background #00000075
 	statusline #ffffff
 	separator #ffffff
 	

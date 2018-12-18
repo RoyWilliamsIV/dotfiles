@@ -52,15 +52,12 @@ alias ac="sudo tlp start"
 alias bat="sudo tlp bat"
 
 # config aliases
-alias cfi3="vim /home/roy/.config/i3/config"
-alias cfi3status="vim /home/roy/.config/i3status/config"
-alias cfbash="vim /home/roy/.bashrc"
-alias cfxinit="vim /home/roy/.xinitrc"
-alias cfterm="vim /home/roy/.dotfiles/.termite/"
-alias cfnews="vim /home/roy/.newsboat/config"
-alias cfdm="sudo vim /etc/cdmrc"
-alias cfvim="vim /home/roy/.vimrc"
-alias cfi3blocks="vim /home/roy/.config/i3blocks/config"
+alias cfi3="vim ~/.dotfiles/.i3"
+alias cfi3status="vim ~/.dotfiles/.i3status"
+alias cfbash="vim ~/.dotfiles/.i3status"
+alias cfxinit="vim ~/.dotfiles/.xinitrc"
+alias cfterm="vim ~/.dotfiles/.termite"
+alias cfvim="vim ~/.dotfiles/.vimrc"
 
 # location aliases
 alias desk="bash /home/roy/scripts/desk.sh"
