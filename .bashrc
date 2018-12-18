@@ -51,7 +51,7 @@ alias yt='youtube-dl "`xclip -o`"'
 alias ac="sudo tlp start"
 alias bat="sudo tlp bat"
 
-# config aliases
+# config edit aliases
 alias cfi3="vim ~/.dotfiles/.i3"
 alias cfi3status="vim ~/.dotfiles/.i3status"
 alias cfbash="vim ~/.dotfiles/.i3status"
@@ -59,6 +59,8 @@ alias cfxinit="vim ~/.dotfiles/.xinitrc"
 alias cfterm="vim ~/.dotfiles/.termite"
 alias cfvim="vim ~/.dotfiles/.vimrc"
 
+# config git aliases 
+alias cfsync="cd ~/.dotfiles/; git pull origin master; echo "*** Pulled Latest .dotfiles. ***""
 # location aliases
 alias desk="bash /home/roy/scripts/desk.sh"
 
