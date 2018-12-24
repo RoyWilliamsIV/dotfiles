@@ -22,7 +22,7 @@ set $sup Mod4
 font pango:IBM Plex Mono Medium 10
 
 # i3-gaps config lines
- for_window [class="^.*"] border pixel 2
+ for_window [class="^.*"] border pixel 0
 
 # launch Firefox
 bindsym $mod+apostrophe exec firefox
@@ -37,8 +37,8 @@ bindsym $mod+bracketright exec spotify
 bindsym $mod+bracketleft  exec surf duckduckgo.com
 
 # gaps inner|outer current|all set|plus|minus <px>
- gaps inner 8
- gaps outer 8
+ gaps inner 0
+ gaps outer 0
 
 new_window pixel 0
 hide_edge_borders yes
@@ -236,10 +236,10 @@ bar {
 	separator #ffffff
 	
 			 # border, back, text
-	focused_workspace #ffffff #ffffff #000000
-	active_workspace #000000 #000000 #ffffff
-	inactive_workspace #000000 #000000 #ffffff
-	urgent_workspace #000000 #000000 #ffffff
+	focused_workspace #ffffff #ffffff #00000075
+	active_workspace #00000075 #00000075 #ffffff
+	inactive_workspace #00000075 #00000075 #ffffff
+	urgent_workspace #00000075 #00000075 #ffffff
 	}
 
         status_command i3status
