@@ -9,6 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Global Font Vars
+set $font IBM Plex Mono Medium
+set $fsize 10
+
 # swap caps lock and escape
 exec_always --no-startup-id xmodmap -e "clear lock"
 # exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
@@ -19,10 +23,18 @@ set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:IBM Plex Mono Medium 10
+font pango: $font $fsize
 
 # i3-gaps config lines
- for_window [class="^.*"] border pixel 0
+ for_window [class="^.*"] border pixel 1
+
+# volume
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+
+bindsym XF96AudioLowerVolume exec amixer sset Master 5%-
+
+# brightness control
+bindsym XF86MonBrightnessUp exec light -A 5 
+bindsym XF86MonBrightnessDown exec light -U 5
 
 # launch Firefox
 bindsym $mod+apostrophe exec firefox
@@ -42,7 +54,7 @@ bindsym $mod+bracketleft  exec surf duckduckgo.com
 
 new_window pixel 0
 hide_edge_borders yes
-# smart_borders on
+smart_borders on
 
 # Make all new windows fullscreen
 # for_window [class=".*"] fullscreen enable
@@ -97,8 +109,8 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run  -nb '#000000' -nf '#ffffff' -sb '#ffffff' -sf '#000000' 
-bindsym $mod+n exec networkmanager_dmenu  -nb '#000000' -nf '#ffffff' -sb '#ffffff' -sf '#000000'
+bindsym $mod+d exec dmenu_run -fn "$font-$fsize" -nb '#000000' -nf '#ffffff' -sb '#ffffff' -sf '#000000' 
+bindsym $mod+n exec networkmanager_dmenu  -fn "$font-$fsize" -nb '#000000' -nf '#ffffff' -sb '#ffffff' -sf '#000000'
 
 
 # start rofi
@@ -231,15 +243,15 @@ bar {
 	# hidden_state hide
 	# modifier Mod1	
 	colors {
-	background #00000075
+	background #000000
 	statusline #ffffff
 	separator #ffffff
 	
 			 # border, back, text
-	focused_workspace #ffffff #ffffff #00000075
-	active_workspace #00000075 #00000075 #ffffff
-	inactive_workspace #00000075 #00000075 #ffffff
-	urgent_workspace #00000075 #00000075 #ffffff
+	focused_workspace #ffffff #ffffff #000000
+	active_workspace #000000 #000000 #ffffff
+	inactive_workspace #000000 #000000 #ffffff
+	urgent_workspace #000000 #000000 #ffffff
 	}
 
         status_command i3status

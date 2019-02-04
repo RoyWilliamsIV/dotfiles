@@ -9,6 +9,7 @@
 general {
         colors = false
         interval = 5
+	separator = " "
 }
 
 # order += "ipv6"
@@ -17,6 +18,7 @@ order += "wireless _first_"
 order += "ethernet _first_"
 order += "path_exists VPN"
 order += "battery all"
+order += "cpu_temperature 0"
 # order += "load"
 order += "tztime local"
 
@@ -44,14 +46,13 @@ path_exists VPN {
 }
 
 battery all {
-        format = "%percentage ( %remaining )"
+        format = "%percentage %remaining"
 	integer_battery_capacity = true
-	last_full_capacity = true
 	hide_seconds = true
 }
 
 tztime local {
-        format = " %a, %b.%_d, %Y ( %l:%M  ) "
+        format = " %a, %b. %_d, %Y,%l:%M "
 }
 
 load {
@@ -60,4 +61,9 @@ load {
 
 disk "/" {
         format = "%avail"
+}
+
+cpu_temperature 0 {
+	format = "%degrees °C"                                                                         		
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
